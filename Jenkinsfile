@@ -35,7 +35,7 @@ pipeline {
           def webAppName = 'Azureworkshop2'
           
           // login Azure
-          withCredentials([usernamePassword(credentialsId: 'azurework', passwordVariable: '7AL8Q~9IhyDPsmJ5iKRiA2KxKAR9J32v_5klIaPo', usernameVariable: '0957c43d-68c5-448b-a9cf-aee8efdb38ae')]) {
+          withCredentials([usernamePassword(credentialsId: 'azurework', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
             sh '''
               az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
               az account set -s $AZURE_SUBSCRIPTION_ID
