@@ -22,6 +22,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>2.1.1</version>
       </plugin>
+    
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
@@ -62,6 +63,14 @@
       </plugin>
     </plugins>
   </build>
+
+
+  <properties>
+  <!-- Other properties -->
+  <maven.compiler.source>8</maven.compiler.source>
+  <maven.compiler.target>8</maven.compiler.target>
+</properties>
+
   <dependencies>
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
