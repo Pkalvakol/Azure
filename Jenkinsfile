@@ -11,11 +11,12 @@ node {
   withEnv(['AZURE_SUBSCRIPTION_ID=00b62b12-21d1-43ab-8752-85671481ba87',
         'AZURE_TENANT_ID=025f89bd-eea6-4a20-b985-762459689deb']) {
     
+    
     stage('init') {
       checkout scm
     }
   
-    stage('building') {
+    stage('build') {
       sh 'mvn clean package'
     }
   
